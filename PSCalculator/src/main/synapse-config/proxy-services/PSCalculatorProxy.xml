@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="PSCalculatorProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_19a58cc7-48f2-45e1-a432-7fdfa98b9433">
+            <address uri="http://ws1.parasoft.com/glue/calculator"/>
+        </endpoint>
+        <inSequence>
+            <log>
+                <property name="MESSAGE_OUT" value="About to invoke Calculator Service..."/>
+            </log>
+        </inSequence>
+        <outSequence>
+            <log>
+                <property name="MESSAGE_IN" value="Receiving Calculator Service response..."/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log>
+                <property name="MESSAGE_FAULT" value="Oops...something went wrong"/>
+            </log>
+        </faultSequence>
+    </target>
+</proxy>
