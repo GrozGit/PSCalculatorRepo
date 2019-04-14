@@ -21,3 +21,5 @@ Clicked Add API. Added SOAP endpoint from SOAPUI project. Published and then wen
 
 Pasted in request sample from SOAPUI to add two numbers. Added mime type of request/response and 'mediate' as Soap Action. At first got back a 202 but no response body. Took me a while to realise that the namespace I was using for xmlns:soapenv: of  "http://schemas.xmlsoap.org/soap/envelope/" from my SOAPUI version was SOAP1.1 and that WS02 expected a SOAP1.2 compliant header of "http://www.w3.org/2003/05/soap-envelope". This was not at all obvious. (see APIConsole.PNG)  
 
+Created some soapui mocks on the original soap Caculator service and tested the mocked responses against the proxy service requests. 
+
