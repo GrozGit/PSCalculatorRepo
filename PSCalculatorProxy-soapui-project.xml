@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="43d9ceea-4436-4f4f-89a9-b5e688359240" activeEnvironment="Default" name="PSCalculatorProxy" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4ec396c9-a10e-4d52-988b-8a0561fed61f" wsaVersion="NONE" name="PSCalculatorProxySoap11Binding" type="wsdl" bindingName="{http://ws.apache.org/axis2}PSCalculatorProxySoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8280/services/PSCalculatorProxy?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8088/mockCalculator</con:endpoint><con:endpoint>http://localhost:8280/services/PSCalculatorProxy.PSCalculatorProxyHttpSoap11Endpoint</con:endpoint></con:endpoints><con:operation id="b8842b51-cdf6-4747-ba00-68b3a333ca88" isOneWay="false" action="urn:mediate" name="mediate" bindingOperationName="mediate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="28872043-9666-4f4b-b559-eede3de729f5" name="add"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockCalculator</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.parasoft.com/wsdl/calculator/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cal:add>
+         <cal:x>11</cal:x>
+         <cal:y>2</cal:y>
+      </cal:add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call><con:call id="32c68590-12a5-4a32-964b-edf605a34942" name="subtract"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockCalculator</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.parasoft.com/wsdl/calculator/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cal:subtract>
+         <cal:x>100</cal:x>
+         <cal:y>9</cal:y>
+      </cal:subtract>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call><con:call id="15ebcff7-2c3a-4969-b31a-bc0389e0d1a2" name="multiply"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockCalculator</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.parasoft.com/wsdl/calculator/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cal:multiply>
+         <cal:x>?</cal:x>
+         <cal:y>4</cal:y>
+      </cal:multiply>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call><con:call id="d85fe81b-9cd5-415c-961b-270d66089298" name="divide"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockCalculator</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.parasoft.com/wsdl/calculator/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cal:divide>
+         <cal:numerator>7.7</cal:numerator>
+         <cal:denominator>1</cal:denominator>
+      </cal:divide>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
